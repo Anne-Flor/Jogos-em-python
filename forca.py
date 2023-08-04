@@ -1,10 +1,22 @@
+import random
 def jogar():
 
     print('****************************************')
     print('BEM VINDO AO JOGO DA FORCA')
     print('****************************************')
 
-    palavra_secreta = 'banana'.upper()
+    arquivo = open("/home/flor/AluraVerso/Jogos-em-python/Palavras.txt", "r")
+    palavras = []
+
+    for linha in arquivo:
+        linha = linha.strip()
+        palavras.append(linha)
+
+    arquivo.close()
+
+    numero = random.randrange(0, len(palavras))
+    palavra_secreta = palavras[numero].upper()
+
     letras_acertadas = ['_' for letra in palavra_secreta]
 
     enforcou = False
