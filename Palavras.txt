@@ -2,3 +2,10 @@ banana
 melancia
 morango
 maça
+pera 
+uva 
+lixia 
+abacate
+mamão
+laranja
+tangerina
